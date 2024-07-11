@@ -41,5 +41,5 @@ console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
 // So, ------(Math.floor(0.5 * (20 - 10 + 1)) + 10)
 // ----------(Math.floor(0.5 *(11)) + 10)
-// ----------(Math.floor(5.5) + 10) -> gives floor value of 5.5 = 5.
+// ----------(Math.floor(5.5) + 10) -> gives floor value of 5.5 will be 5.
 // ----------(5 + 10) = 15.

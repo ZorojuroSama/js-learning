@@ -45,8 +45,8 @@ const tinderUser = {
     isLoggedIn: false
 }
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
 
 const users = [
     {
@@ -67,6 +67,24 @@ const users = [
     },
 ]
 
-console.log(users[2].email);
+// console.log(users[2].email);
 
-console.log(Object.keys(users[2]));
+// console.log(Object.keys(users[2]));
+
+
+
+ //---------------Destructuring of objects------------
+
+
+ const course = {
+    coursename: "js in hindi",
+    price:"999",
+    courseInstructor: "hitesh"
+ }
+
+//  course.courseInstructor
+
+const {courseInstructor: instructor} = course
+
+console.log(instructor);
+

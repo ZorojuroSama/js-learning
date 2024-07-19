@@ -23,8 +23,7 @@ if (email) {
 //     console.log("object is empty");
 // }
 
-// Null Coalescing Operator ??
-
+// Null Coalescing Operator ??:
 let val1; 
 // val1 = 5 ?? 10
 // val1 = null ?? 10

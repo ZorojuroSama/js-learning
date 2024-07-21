@@ -47,3 +47,6 @@ const myCoding = [
 myCoding.forEach( (item) => {
     console.log(`File name of ${item.languageName} is ${item.languageFile}`);
 } )
+
+
+// ** Most Important: forEach iterates arrays and print them, but dosen't return any value. more details in file "six.js"

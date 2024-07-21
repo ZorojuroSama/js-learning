@@ -9,16 +9,16 @@ const myObject = {
 
 for (const key in myObject) {
     // console.log(key);
-    // console.log(`${key} is shortcut for ${myObject[key]}`);
+    console.log(`${key} is shortcut for ${myObject[key]}`);
 }
 
 // maps are not iteratable. 
-const maps = new Map()
-maps.set("IN","India")
-maps.set("USA","United States Of America")
-maps.set("FR","France")
-maps.set("UK","United Kingdom")
+// const maps = new Map()
+// maps.set("IN","India")
+// maps.set("USA","United States Of America")
+// maps.set("FR","France")
+// maps.set("UK","United Kingdom")
 
-for (const key in maps) {
-    console.log(key);
-}
+// for (const key in maps) {
+//     console.log(key);
+// }

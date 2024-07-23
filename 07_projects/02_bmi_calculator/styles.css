@@ -1,0 +1,45 @@
+body {
+  background-color: #212121;
+  color: #fff;
+  font-size: 20px;
+}
+
+.container {
+  text-align: center;
+  box-sizing: border-box;
+  border: solid white;
+  margin: 100px auto ;
+  width: 600px;
+}
+h1 {
+  margin: 20px 20px 40px 20px;
+}
+.uw-color, .ow-color{
+  color: red;
+}
+.normal-range-color {
+  color:rgb(42, 187, 42);
+}
+button {
+  background-color: rgb(117, 240, 141);
+  color: black;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  margin: 13px;
+  padding: 8px;
+  transition: opacity 0.15s;
+}
+#height, #weight {
+  width: 150px;
+  height: 20px;
+  margin-left: 5px;
+}
+button:active {
+  opacity: 0.2;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}

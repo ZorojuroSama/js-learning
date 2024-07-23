@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language"> 
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage (langName) {
+       const li =  document.createElement('li')
+       li.innerHTML = `${langName}`
+       document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Java")
+
+    //------------------ more optimesed method -----------
+    function addOptiLang (langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang("Typescript")
+
+//------------Edit elements --------------------
+
+    const secondLang = document.querySelector("li:nth-child(2)") // selecting an element that is 2nd item of li. (nth-child(2))
+    secondLang.innerHTML = "Mojo" // edit/overwrite the existing element "content" with new "content".
+
+//------ another approach (by creating new li element)--------
+    const newli = document.createElement('li')
+    newli.textContent = "Nojo" // changed content in the li
+    secondLang.replaceWith(newli) // completely replaces the old "element" with new text "element".
+
+// --------------- remove ---------------------
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>

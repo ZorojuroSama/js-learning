@@ -32,7 +32,7 @@
 
 
 //---------------------- Bubbling Phase: ---------------------
-
+// ---------------------(Inside to Outside)-------------------
 // Event starts at the target element (where the event originated).
 // Travels upwards through the DOM tree.
 // Event handlers on parent elements are executed after the target element's handler.
@@ -40,7 +40,7 @@
 
 //
     document.getElementById('images').addEventListener('click', function(e){
-        console.log("Clicked in ul");
+        console.log("Clicked inside the ul");
     }, false) // event bubbling. it dosen't matter if we pass "flase" in the third argument as it is flase by default.
 
 
@@ -50,7 +50,7 @@
 
 // console output --->
 // owl clicked
-// Clicked in ul
+// Clicked inside the ul
     
 
 

@@ -63,13 +63,13 @@ Travels downwards through the DOM tree.
 Event handlers on parent elements are executed before reaching the target element.
 */
 
-    // document.getElementById('images').addEventListener('click', function(e){
-    //     console.log("Clicked inside the ul");
-    // }, true) // useCapture is true.
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("Clicked inside the ul");
+    }, true) // useCapture is true.
 
-    // document.getElementById('owl').addEventListener('click', function(e){
-    //     console.log("owl clicked");
-    // }, true)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+    }, true)
 
 // console output-->
 // Clicked inside the ul

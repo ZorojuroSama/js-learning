@@ -8,6 +8,7 @@ if (email) {
 }
 
 // flasy values:
+// 0, flase, undefined, null, NaN, document.all
 // false, 0, -0, BigInt 0n, "", null, undefined, Nan
 
 // truthy values:

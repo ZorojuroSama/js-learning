@@ -19,6 +19,40 @@
    </div>
 </body>
 <script>
+    // important topics to learn in events----->
+
+    // type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY -- Interviews
+    // altkey, ctrlkey, shiftkey, keyCode
     
+//-------------------------Event Propagation-----------------------
+// Event propagation in describes how events travel through the DOM tree. It occurs in two phases:
+// 1. Event bubbling (, flase)
+// 2. Event capturing (, true)
+
+
+//---------------------- Bubbling Phase: ---------------------
+
+// Event starts at the target element (where the event originated).
+// Travels upwards through the DOM tree.
+// Event handlers on parent elements are executed after the target element's handler.
+
+
+//
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("Clicked in ul");
+    }, false) // event bubbling. it dosen't matter if we pass "flase" in the third argument as it is flase by default.
+
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked");
+    }) // event bubbling
+
+// console output --->
+// owl clicked
+// Clicked in ul
+    
+
+
 </script>
 </html>

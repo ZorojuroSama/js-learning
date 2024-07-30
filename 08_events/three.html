@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Joint aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    /* Date.now() method gives current date output in miliseconds. 
+    To convert in into a human readable form, following code is written.
+    
+    */
+    function displayCurrentTime() {
+    const now = new Date();
+    const options = {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: false // Use 24-hour format
+    };
+    const formattedTime = now.toLocaleTimeString('en-US', options);
+    console.log(formattedTime);
+}
+    
+</script>
+</html>

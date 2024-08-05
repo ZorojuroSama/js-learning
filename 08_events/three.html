@@ -13,8 +13,8 @@
 <script>
 
     /* Date.now() method gives current date output in miliseconds. 
-    To convert in into a human readable form, following code is written.
-    
+    To convert in into a human readable form, following function is written.
+    *** This displayCurrentTime() function code is copied from ChatGPT ***
     */
     function displayCurrentTime() {
     const now = new Date();
@@ -22,11 +22,26 @@
     hour: 'numeric',
     minute: 'numeric',
     second: 'numeric',
-    hour12: false // Use 24-hour format
+    hour12: true 
     };
     const formattedTime = now.toLocaleTimeString('en-US', options);
-    console.log(formattedTime);
-}
+    console.log(`Its: ' ${formattedTime}`);
+}   
+    let intervalId;
+
+    document.querySelector('#start').addEventListener('click', function(){
+        if(!intervalId){
+            intervalId = setInterval(displayCurrentTime,1000);
+        }
+    })
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        if(intervalId){
+            clearInterval(intervalId);
+            intervalId = null;
+            console.log("Stopped");
+        }
+    })
     
 </script>
 </html>

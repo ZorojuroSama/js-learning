@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: aliceblue;
+        text-align: center;
+      }
+      .container {
+        margin: 3rem auto;
+        padding: 8px;
+        display: inline-block;
+        border: 1.5px solid aliceblue;
+      }
+      .card {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #333;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+      }
+      .card img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+      }
+      button {
+        border: none;
+        border-radius: 8px;
+        background-color: azure;
+        color: #333;
+        width: 5rem;
+        height: 2rem;
+        font-weight: 600;
+        font-size: medium;
+        padding: 5px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1>API Request</h1>
+    <div class="container">
+      <h2><span>Hitesh Choudhary</span></h2>
+      <button id="getData">Get Data</button>
+    </div>
+    <div id="output"></div>
+  </body>
+  <script>
+    document.getElementById("getData").addEventListener("click", function () {
+      const requestURL = "https://api.github.com/users/hiteshchoudhary";
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", requestURL);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          const data = JSON.parse(this.responseText);
+          displayCard(data);
+        }
+      };
+      xhr.send();
+    });
+
+    function displayCard(data) {
+        const output = document.getElementById("output");
+        const card = `
+          <div class="card">
+            <img src="${data.avatar_url}" alt="Profile Picture" />
+            <h3>${data.name}</h3>
+            <p>Follower Count:  ${data.followers}</p>
+          </div>
+        `;
+        output.innerHTML = card;
+      }
+  </script>
+</html>
